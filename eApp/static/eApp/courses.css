@@ -1,0 +1,38 @@
+
+#land {
+  width: 100%;
+  height: 100%;
+  background-image: none;
+  background-color: rgb(230, 237, 240);
+}
+
+.about-section {
+    margin-top: 55px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.row-respon {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0 0;
+}
+
+.row-respon h5{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.respon {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.respon iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

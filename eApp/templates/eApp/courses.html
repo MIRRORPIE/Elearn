@@ -1,0 +1,62 @@
+{% extends "eApp/layout.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'eApp/courses.css' %}">
+{% endblock css %}
+
+{% block content1 %}
+    <div class="container about-section">
+        <h2>Courses</h2>
+        {% if not request.GET.search %}
+        <h4>Select your videos using filter</h4>
+        <form action="{% url 'eApp-ncert-solutions' %}?" method="get">
+            <select name="class" required class="btn btn-outline-secondary">
+                <option value="">Select your class</option>
+                <option value="12">12</option>
+                <option value="11">11</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+            </select>
+            <select name="subject" class="btn btn-outline-secondary">
+                <option value="">Select subject</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <h3>Class {{request.GET.class}}
+            {% if request.GET.subject %}
+            - {{request.GET.subject}}
+            {% endif %}
+        </h3>
+        {% else %}
+        <h3>Serach Query - '{{request.GET.search}}'</h3>
+        {% endif %}
+    </div>
+{% endblock content1 %}
+
+{% block all%}
+    <div class="">
+        {% for li in cvid %}
+            <div class="row-respon">
+                <div class="respon">
+                    <iframe width= "560" height= "315" src="{{ li.link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h5>{{ li.title }}</h5>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock all %}
+
+
+
+
+{% block js %}
+    <script src="{% static 'eApp/filter.js' %}"></script>
+{% endblock js %}

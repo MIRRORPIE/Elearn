@@ -1,0 +1,187 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yesteryear">
+        <link rel="stylesheet" type="text/css" href="{% static 'eApp/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eApp/Pretty-Footer.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eApp/Contact-Form-Clean.css' %}">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome-all.min.css' %}">
+        <!-- <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome5-overrides.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome-all.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome-all.min.css' %}"> -->
+
+
+        {% block css %}{% endblock css %}
+
+        {% if title %}
+            <title>eLearn | {{ title }}</title>
+        {% else %}
+            <title>eLearn</title>
+        {% endif %}
+    </head>
+    <body>
+        <section id="land">
+            <div id="land-top">
+                <nav class="navbar navbar-light navbar-expand-md visible fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand text-center" href="{% url 'eApp-home' %}">eLearn Fluent</a>
+                        <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler" aria-controls="navcol-1" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse"id="navcol-1">
+                            <ul class="nav navbar-nav mx-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link drodown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        PDF&#39;s <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <a class="dropdown-item" href="#">Physics</a>
+                                        <a class="dropdown-item" href="#">Chemistry</a>
+                                        <a class="dropdown-item" href="#">Biology</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Maths</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link drodown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Courses <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item"  href="{% url 'eApp-ncert-solutions' %}">NCERT</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" tabindex="-1" href="{% url 'eApp-ncert-solutions' %}?class=12">Class 12</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=11">Class 11</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=10">Class 10</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=9">Class 9</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=8">Class 8</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=7">Class 7</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=6">Class 6</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">ICSE</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" tabindex="-1" href="{% url 'eApp-ncert-solutions' %}?class=12">Class 12</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=11">Class 11</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=10">Class 10</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=9">Class 9</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=8">Class 8</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=7">Class 7</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'eApp-ncert-solutions' %}?class=6">Class 6</a></li>
+                                            </ul>
+                                        </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a class="dropdown-item" href="#">IIT JEE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link drodown-toggle" href="{% url 'eApp-home' %}" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Exams <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                        <a class="dropdown-item" href="{% url 'eApp-home' %}">X Boards</a>
+                                        <a class="dropdown-item" href="{% url 'eApp-home' %}">XII Boards</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{% url 'eApp-home' %}">IIT JEE</a>
+                                        <a class="dropdown-item" href="{% url 'eApp-home' %}">NEET</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link drodown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        More <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                        <a class="dropdown-item" href="{% url 'eApp-about' %}">About Us</a>
+                                        <a class="dropdown-item" href="#contact-us">Contacts</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{% url 'eApp-home' %}">Blog</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav">
+                                {% if user.is_authenticated %}
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">profile</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            {% block land-middle %}{% endblock %}
+
+            <div class="row data-show justify-content-center">
+                <div class="col col-show">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+
+            {% block content1 %}{% endblock content1 %}
+        </section>
+
+
+
+
+        {% block all %}{% endblock all %}
+
+
+        <footer class="foot">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 footer-navigation">
+                    <h3><a href="{% url 'eApp-home' %}">eLearn Fluent</a></h3>
+                    <p class="links"><a href="{% url 'eApp-home' %}">Home</a><strong> · </strong><a href="{% url 'eApp-home' %}">Blog</a><strong> · </strong><a href="{% url 'eApp-about' %}">About</a><strong> · </strong><a href="{% url 'eApp-home' %}">Faq</a><strong> · </strong><a href="{% url 'eApp-home' %}">Contact</a></p>
+                    <p class="company-name">eLearn Fluent © 2020</p>
+                </div>
+                <div class="col-sm-6 col-md-4 footer-contacts">
+                    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                        <p><span class="new-line-span">21 Revolution Street</span> Paris, France</p>
+                    </div>
+                    <div><i class="fa fa-phone footer-contacts-icon"></i>
+                        <p class="footer-center-info email text-left"> +1 555 123456</p>
+                    </div>
+                    <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                        <p> <a href="{% url 'eApp-home' %}" target="_blank">support@elearnfluent.com</a></p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 footer-about">
+                    <h4>About the company</h4>
+                    <p>eLearnFluent is a e-learning company. The mission of the company is to provide free online education to students.</p>
+                    <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="{% static 'eApp/navbar-drop.js' %}"></script>
+        {% block js %}{% endblock js %}
+    </body>
+</html>
