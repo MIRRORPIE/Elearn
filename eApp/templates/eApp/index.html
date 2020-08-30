@@ -1,6 +1,11 @@
 {% extends "eApp/layout.html" %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'eApp/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'eApp/owl.theme.default.min.css' %}">
+{% endblock css %}
+
 {% block land-middle %}
     <div id="land-middle" style="padding-top: 35vh;">
         <h1>Doubt?</h1>
@@ -17,42 +22,50 @@
 {% endblock land-middle %}
 
 {% block all %}
-    <section id="showcase">
+    <section id="showcase" style="padding-bottom: 10vh;padding-top:5vh;">
         <div class="container">
-            <h1>PDF's</h1>
+            <h1 style="padding-bottom:5vh;">PDF's</h1>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                <div id="owl-course" class="owl-carousel owl-theme">
+                    <div class="item card-group car-item">
                         <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
                             <div class="card-body">
-                                <h5 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h5>
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                    <div class="item card-group car-item">
                         <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
                             <div class="card-body">
-                                <h5 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h5>
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                    <div class="item card-group car-item">
                         <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
                             <div class="card-body">
-                                <h5 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h5>
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                    <div class="item card-group car-item">
                         <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
                             <div class="card-body">
-                                <h5 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h5>
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item card-group car-item">
+                        <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
+                            <div class="card-body">
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item card-group car-item">
+                        <div class="card"><embed src="{% static 'eApp/NCERT-SOLUTION-9-STATISTICS-1.pdf' %}#toolbar=0">
+                            <div class="card-body">
+                                <h6 class="text-center card-title">NCERT-SOLUTION-9-STATISTICS-1</h6>
                             </div>
                         </div>
                     </div>
@@ -60,39 +73,47 @@
             </div>
         </div>
     </section>
-    <section id="showcase-courses" style="padding-bottom: 10vh;">
+    <section id="showcase-courses" style="padding-bottom: 10vh;padding-top:5vh;">
         <div class="container">
-            <h1>Courses</h1>
+            <h1 style="padding-bottom:5vh;">Courses</h1>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                <div id="owl-course" class="owl-carousel owl-theme">
+                    <div class="item card-group car-item">
                         <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <div class="card-body">
                                 <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
-                        <div class="card"><iframe  src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <div class="card-body">
-                                <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                    <div class="item card-group car-item" >
                         <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <div class="card-body">
                                 <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 10px;">
-                    <div class="card-group">
+                    <div class="item card-group car-item" >
+                        <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item card-group car-item" >
+                        <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item card-group car-item" >
+                        <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item card-group car-item" >
                         <div class="card"><iframe src="https://www.youtube.com/embed/ppq1pgN1RZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <div class="card-body">
                                 <h5 class="text-center card-title">Introduction - Statistics Class 9th Maths</h5>
@@ -114,3 +135,8 @@
         </form>
     </div>
 {% endblock all %}
+
+{% block js %}
+    <script src="{% static 'eApp/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'eApp/app.js' %}"></script>
+{% endblock js %}
