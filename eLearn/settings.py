@@ -25,7 +25,7 @@ SECRET_KEY = '0=%rs_oshwpo617@=^*@5*pr0u@*i+_@9173d$-zd$qq9-!y9b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['elearnfluent.herokuapp.com']
 
 
 # Application definition
